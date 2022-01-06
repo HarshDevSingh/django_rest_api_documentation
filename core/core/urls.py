@@ -25,12 +25,12 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 schema_view = get_schema_view(
    openapi.Info(
-      title="demo api",
+      title="DRF api boilerplate",
       default_version='v1',
-      description="Test description",
+      description="DRF api boilerplate to start creating rest api",
       terms_of_service="https://www.google.com/policies/terms/",
-      contact=openapi.Contact(email="contact@snippets.local"),
-      license=openapi.License(name="BSD License"),
+      contact=openapi.Contact(email="admin@mail.com"),
+      license=openapi.License(name="Open License"),
    ),
    public=True,
    permission_classes=(permissions.AllowAny,),
