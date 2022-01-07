@@ -1,10 +1,15 @@
-FROM python:3.8
+FROM python:3.9
 ENV PYTHONUNBUFFERED 1
 
 WORKDIR /core
 
-COPY requirements.txt requirements.txt
+USER root
 
+COPY requirements.txt requirements.txt
 COPY . .
 
-RUN pip3 install -r requirements.txt
+RUN pip install --upgrade pip && \
+    pip install -r requirements.txt && \
+    adduser --disabled-password --no-create-home core
+
+USER core

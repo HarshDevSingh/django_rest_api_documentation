@@ -10,3 +10,7 @@ services:
       - "8000:8000"
     volumes:
       - /Users/kunwarharsh/Desktop/DjangoPrjs/drf_api_documention/django_rest_api_documentation/core:/core
+    environment:
+      - SECRET_KEY="${SECRET_KEY}"
+      - DEBUG="${DEBUG}"
+      - ALLOWED_HOSTS=${ALLOWED_HOSTS}
