@@ -1,0 +1,12 @@
+version: '3.2'
+
+services:
+  backend:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    command: gunicorn core.wsgi --bind 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - /Users/kunwarharsh/Desktop/DjangoPrjs/drf_api_documention/django_rest_api_documentation/core:/core
